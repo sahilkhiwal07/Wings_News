@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.wings_news.ui.fragments.FragmentHome"
+        android:label="Breaking News">
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentArticle"
+            app:destination="@id/fragmentArticle"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.wings_news.ui.globalFragment.About"
+        android:label="About" />
+    <action
+        android:id="@+id/action_global_about"
+        app:destination="@id/about" />
+    <fragment
+        android:id="@+id/fragmentFavourite"
+        android:name="com.example.wings_news.ui.fragments.FragmentFavourite"
+        android:label="Favourites">
+        <action
+            android:id="@+id/action_fragmentFavourite_to_fragmentArticle"
+            app:destination="@id/fragmentArticle"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.example.wings_news.ui.fragments.FragmentSearch"
+        android:label="Search News">
+        <action
+            android:id="@+id/action_fragmentSearch_to_fragmentArticle"
+            app:destination="@id/fragmentArticle"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentArticle"
+        android:name="com.example.wings_news.ui.fragments.FragmentArticle"
+        android:label="News Article">
+        <argument
+            android:name="article"
+            app:argType="com.example.wings_news.data.model.Article" />
+    </fragment>
+</navigation>

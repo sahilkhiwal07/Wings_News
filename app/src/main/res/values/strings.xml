@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Wings_News</string>
+    <string name="about">
+        This app give info about News.
+        It has News Api: https://www.newsapi.org.
+        This is for only practice purpose.
+    </string>
+    <string name="saved_article">Article saved successfully</string>
+    <string name="delete_article">Article deleted successfully</string>
+</resources>
